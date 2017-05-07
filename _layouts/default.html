@@ -4,17 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="assets/main.css">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/jaydenseric-reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Louie's site | {{page.title}}</title>
+  <link rel="stylesheet" href="css/prism.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto|Eb+Garamond" rel="stylesheet">
 </head>
 <body>
 
-  {% include nav.html %}
+  <div id="container">
+{% include header.html %}
+{% include aside.html
+  tags="code, formatter, syntax, highlighter, highlight"
+  day-of-month="07"
+  day-of-week="Sunday"
+  month="May"
+  year="2017"
+%}
+    <main>
+{{content}}
+    </main>
+{% include footer.html %}
+  </div>
 
-
-
-  {{content}}
 
 </body>
 </html>
